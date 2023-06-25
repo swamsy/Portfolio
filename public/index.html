@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Swan | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/interlocked chain.png" />
+    <script src="https://kit.fontawesome.com/652dbeb7b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+<!--Header-->
+<div id="header">
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#projects-title" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact-title" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <div class="header-text">
+            <div class="intro">
+                <h1>Hello, I'm Michael 👋</h1>
+                <hr>
+            </div>
+            <h1>
+                Computer Science |<br>University of 
+                <span id="cs-student-ct">Connecticut
+                    <img src="images/huskies logo.png" id="huskies-logo" alt="Uconn Huskies logo">
+                </span>
+            </h1>
+            <div class="actions">
+                <a href="images/Michael Swan - Resume.pdf" target="_blank" id="download-cv"><i class="fa-solid fa-download"></i>Download CV</a>
+                <div class="contact-icons">
+                    <a href="https://www.linkedin.com/in/m-swan" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/swamsy" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Projects-->
+<div id="projects">
+    <div class="below-header-container">
+            <div class="sub-title">
+                <h1 id="projects-title">Projects</h1>
+            </div>
+            <div class="projects-content-container">
+                <div class="left-text">
+                    <h2 class="project-category">PERSONAL PROJECT</h2>
+                    <h1 class="project-name">TBD</h1>
+                    <ul>
+                        <li class="TBD-languages">HTML</li>
+                        <li class="TBD-languages">CSS</li>
+                        <li class="TBD-languages">JavaScript</li>
+                        <li class="TBD-languages">Node.js</li>
+                    </ul>
+                    <div class="site-code">
+                        <a href="#"><h2 class="visit-site">Visit the site<i class="fa-solid fa-link"></i></h2></a>
+                        <a href="https://github.com/swamsy" target="_blank"><h2 class="see-code">See the code<i class="fa-brands fa-github"></i></h2></a>
+                    </div>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem perferendis eius! Distinctio hic modi velit impedit, incidunt sit recusandae laborum ad inventore veniam tenetur ipsa, sed in aliquid ipsam?</p>
+                </div>
+                <div class="right-image">
+                    <a href="#"><img src="images/Macbook Pro TBD Mockup.png" alt="Portfolio Image" class="macbook"></a>
+                    <a href="#"><img src="images/iPhone 14 Pro Max TBD Mockup.png" alt="iPhone 14 Pro Max Portfolio Mockup" class="iphone"></a>
+                </div>
+            </div>
+            <div class="projects-content-container">
+                <div class="left-text">
+                    <h2 class="project-category">PERSONAL PROJECT</h2>
+                    <h1 class="project-name">Portfolio</h1>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>Netlify</li>
+                    </ul>
+                    <div class="site-code">
+                        <a href="https://github.com/swamsy" target="_blank"><h2 class="see-code">See the code<i class="fa-brands fa-github"></i></h2></a>
+                    </div>
+                    <p class="description">My first project in order to learn HTML, CSS, and JavaScript. It is a fully responsive website featuring my projects and a contact form, powered by Nodemailer.</p>
+                </div>
+                <div class="right-image">
+                    <a href="#"><img src="images/MacBook Pro Portfolio Mockup.png" alt="MacBook Portfolio Mockup" class="macbook"></a>
+                    <a href="#"><img src="images/iPhone 14 Pro Max Portfolio Contact Form Mockup.png" alt="iPhone 14 Pro Max Portfolio Mockup" class="iphone"></a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!--Contact-->
+<div id="contact">
+    <div class="below-header-container">
+        <div class="sub-title">
+            <h1 id="contact-title">Contact</h1> 
+        </div>
+        <div class="contact-content-container">
+            <div class="left-contact">
+                <h1 id="get-in-touch">Get in touch</h1>
+                <h2 id="socials">SOCIALS</h2>
+                <div class="contact-icons">
+                        <a href="https://www.linkedin.com/in/m-swan" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/swamsy" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                </div>
+            </div>
+            <div class="right-contact">
+                <div id="notification" class="hide">
+                    <p id="notification-message"></p>
+                </div>
+                <form action="" class="contact-form">
+                    <div class="group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="group">
+                        <textarea id="message" rows="10" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" id="send-button">Send<i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<div id="footer">
+    <div class="below-header-container">
+        <h2>Michael Swan</h2>
+        <p>© 2023 | Built and designed by Michael Swan</p>
+    </div>
+</div>
+
+<!--Scroll to top button-->
+<a href="#" class="stt"><i class="fa-solid fa-arrow-up"></i></a>
+
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fffffe;
+    color: #16161a;
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+}
+
+.container {
+    padding: 0 clamp(1rem, 10vw, 200px);
+}
+
+.below-header-container {
+    padding: 0 clamp(1rem, 7vw, 200px);
+    max-width: 1100px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* HEADER */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-color: #16161a;
+    color: #fffffe;
+}
+
+.header-text {
+    margin-top: 20vh;
+    font-size: 1.75rem;
+}
+
+.header-text h1 {
+    font-weight: 400;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro {
+    display: inline-block;
+}
+
+.header-text .intro hr {
+    margin: 0;
+    width: 100%;
+}
+
+#cs-student-ct {
+    position: relative;
+    display: inline-block;
+}
+
+#huskies-logo {
+    position: absolute;
+    margin-left: 1rem;
+    height: 4.375rem;  
+    transition: transform 1s;
+}
+
+#huskies-logo:hover {
+    transform: translateY(-5px);
+}
+
+.header-text .actions {
+    display:flex;
+    align-items: center;
+}
+
+.fa-download {
+    margin-right: 1rem;
+}
+
+#download-cv {
+    color:#16161a;
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 600;
+    background-color: #7f5af0;
+    margin-right: 1rem;
+    transition: 0.3s;
+}
+
+#download-cv:hover {
+    opacity: 75%;
+}
+
+.header-text .contact-icons a i {
+    font-size: 3.125rem;
+    color: #7f5af0;
+    margin-left: 1.25rem;
+    transition: 0.3s;
+}
+
+.header-text .contact-icons a i:hover {
+    opacity: 75%;
+}
+
+
+/* NAV BAR */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 1rem 2rem;
+}
+
+nav ul li a {
+    color: #fffffe;
+    font-size: 1.125rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 75%;
+}
+
+.hamburger {
+    color: #fffffe;
+    margin-top: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 15px;
+    height: 3px;
+    margin: 3px auto;
+    background-color: #fffffe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* SUB-TITLE HEADERS */ 
+.sub-title h1 {
+    position: relative;
+    display: inline-block;
+    margin-top: 3.5rem;
+    margin-bottom: 1.75rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.sub-title h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height:40%;
+    margin-left: 0.3rem;
+    bottom: -5%;
+    left: 0;
+    background: #7f5af0;
+    z-index: -1;
+}       
+
+.sub-title h1:hover::before {
+    animation: shrink-grow 0.4s ease-in-out;
+}
+
+@keyframes shrink-grow {
+    0% { width: 100%; }
+    50% { width: 40%; }
+    100% { width: 100%; }
+}
+
+
+/* PROJECTS */
+#projects .projects-content-container {
+    margin-bottom: clamp(30px, 7vh, 120px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: #16161A;
+}
+
+#projects .project-category {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+#projects .project-name {
+    margin-top: 0;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.projects-content-container .left-text ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.projects-content-container .left-text ul li {
+    margin-right: 0.25rem;
+    margin-bottom: 1rem;
+    color: #fffffe;
+    font-size: 1rem;
+    padding: 0.25rem 0.7rem;
+    background: #16161A;
+}
+
+.projects-content-container .left-text ul li.TBD-languages {
+    color:#16161A;
+}
+
+#projects .site-code {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+#projects .site-code a h2 {
+    font-size: 1.2rem;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+#projects .site-code a h2:hover {
+    filter: brightness(80%);
+}
+
+#projects .site-code .visit-site, #projects .site-code .see-code {
+    background: #7f5af0;
+    padding: 0.8rem 1.3rem;
+    color: #16161A;
+}
+
+#projects .site-code .visit-site {
+    margin-right: 1.5rem;
+}
+
+#projects .fa-link, #projects .fa-github {
+    margin-left: 0.5rem;
+}
+
+#projects .description {
+    font-size: 1.3rem;
+    line-height: 1.75;
+    font-weight: 400;
+    max-width: 35ch;
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+}
+
+#projects .right-image {
+    position: relative;
+    width: 420px;
+    height: 350px; 
+    margin-top: 2.3rem;
+    transition: all 0.3s ease; 
+}
+
+#projects .right-image:hover {
+    transform: scale(1.1);
+}
+
+.macbook {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.6));
+}
+
+.iphone {
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    width: 22%;
+    height: auto;
+    filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.6));
+}
+
+
+/* CONTACT */
+#contact .contact-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-bottom: clamp(30px, 7vh, 120px);
+}
+
+.left-contact, .right-contact {
+    flex-basis: 50%;
+}
+
+.left-contact #get-in-touch {
+    color: #16161A;
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-left: -0.3rem;
+    font-weight: 400;
+}
+
+.left-contact #socials {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+.left-contact .contact-icons a i {
+    font-size: 3.125rem;
+    color: #7f5af0;
+    margin-right: 1.25rem;
+    margin-left: 0.2rem;
+    transition: 0.3s;
+}
+
+.left-contact .contact-icons a i:hover {
+    filter: brightness(80%);
+}
+
+#notification {
+    position: absolute;
+    border-radius: 6px;
+    top: -3.5rem;
+    width: 100%;
+    text-align: center;
+    background-color: #00C851;
+    color: #fffffe;
+    transition: opacity 0.5s;
+}
+
+#notification.hide {
+    opacity: 0;
+}
+  
+#notification #notification-message {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+#notification #notification-message .fa-circle-check, #notification #notification-message .fa-circle-xmark {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.right-contact {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.right-contact .contact-form .group {
+    position: relative;
+}
+
+.right-contact .contact-form .group label {
+    font-size: 0.875rem;
+    color: #16161A;
+    position: absolute;
+    top: -0.5rem;
+    left: 1.25rem;
+    background-color: #fffffe;
+    transition: all .3s ease;
+}
+
+.right-contact .contact-form .group input, .right-contact .contact-form .group textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.1rem;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #16161A;
+    font-size: 1.25rem;
+    border: 1px solid #16161A;
+    resize: none;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.right-contact .contact-form .group input:placeholder-shown+ label,
+.right-contact .contact-form .group textarea:placeholder-shown+ label {
+    top: 1.25rem;
+    background-color: transparent;
+}
+
+.right-contact .contact-form .group input:focus,
+.right-contact .contact-form .group textarea:focus {
+    border-color: #7f5af0; 
+}
+
+.right-contact .contact-form .group input:focus + label,
+.right-contact .contact-form .group textarea:focus + label {
+    top: -0.5rem;
+    background-color: #fffffe; 
+    color: #7f5af0;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+#send-button {
+    border: none;
+    width: 100%;
+    color:#16161a;
+    font-size: 1.125rem;
+    padding: 1rem 0;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 600;
+    background-color: #7f5af0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#send-button:hover {
+    filter: brightness(80%);
+}
+
+.fa-paper-plane {
+    margin-left: 0.5rem;
+}
+
+
+/* CONTACT FORM MESSAGE SCROLLBAR */
+.right-contact .contact-form .group textarea::-webkit-scrollbar {
+    width: 18px;
+}
+
+.right-contact .contact-form .group textarea::-webkit-scrollbar-thumb {
+    background-color: #7f5af0;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    background-clip: padding-box;
+}
+
+
+/* FOOTER */
+#footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #16161a;
+    color: #fffffe;
+    padding: 0.5rem;
+}
+
+/* WEBSITE SCROLLBAR */
+body::-webkit-scrollbar {
+    width: 13px; 
+}
+  
+body::-webkit-scrollbar-track {
+    background: #d4c7fa;
+    box-shadow: inset 0 0 2px#585858;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: #7f5af0; 
+    border-radius: 20px;
+}
+
+
+/* SCROLL TO TOP BUTTON */
+.stt {
+    color: #16161A;
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background:#7f5af0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.stt.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.stt:hover {
+    filter: brightness(80%);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 400px) {
+    
+    /* HEADER */
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    #huskies-logo {
+        margin-left: 0.6rem;
+        height: 2rem;
+    }
+
+    #download-cv {
+        font-size: 0.75rem;
+        margin-right: 0.35rem;
+        padding: 0.65rem 0.65rem;
+    }
+
+    .header-text .contact-icons a i {
+        font-size: 2.4rem;
+        margin-left: 0.8rem;
+    }   
+}
+
+@media screen and (max-width: 450px) {
+
+    #footer p {
+        font-size: 0.75rem;
+    }
+
+    #contact #contact-title {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    /* HEADER */
+    .header-text h1 {
+        font-size: 1.9rem;
+    }
+
+    #huskies-logo {
+        margin-left: 0.8rem;
+        height: 2.5rem;
+    }
+
+    #download-cv {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        padding: 0.9rem 0.9rem;
+    }
+
+    .header-text .contact-icons a i {
+        font-size: 2.7rem;
+        margin-left: 1rem;
+    }
+
+    /* NAV BAR */
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+ 
+    .nav-menu {
+        display: flex;
+        position: absolute; 
+        top: -100%; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        flex-direction: column;
+        align-items: center;
+        transition: top 0.3s ease;
+        margin: 0;
+        padding: 1rem 0; 
+    }
+
+    .nav-menu.active {
+        top: 0;
+    }
+
+    /* PROJECTS */
+    #projects .project-name {
+        font-size: 2.5rem;
+    }
+
+    #projects .left-text .visit-site {
+        margin-bottom: 1rem;
+    }
+
+    .iphone {
+        top: 20%; 
+        left: 70%; 
+        width: 25%; 
+    }
+
+    /* CONTACT */
+    #contact .contact-content-container {
+      flex-direction: column;
+    }
+
+    .left-contact, .right-contact {
+      flex-basis: 100%;
+    }
+
+    .right-contact {
+        margin-top: 5.5rem;
+    }
+    
+    /* SCROLL TO TOP BUTTON */
+    .stt {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    #projects .description {
+        max-width: 100%;
+    }
+}
