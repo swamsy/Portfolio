@@ -387,6 +387,7 @@ nav ul li a:hover {
 }
 
 .right-contact .contact-form .group input, .right-contact .contact-form .group textarea {
+    font-family: 'Mulish', sans-serif;
     width: 100%;
     padding: 1rem;
     margin-bottom: 1.1rem;
@@ -685,6 +686,5 @@ body::-webkit-scrollbar-thumb {
     #send-button {
         font-size: 1rem;
         padding: 0.8rem 0;
-        border-radius: 500px;
     }
 }
