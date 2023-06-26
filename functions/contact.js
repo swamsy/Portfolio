@@ -36,7 +36,7 @@ const transporter = nodemailer.createTransport({
 
 exports.handler = async (event, context) => {
     if (event.httpMethod !== "POST") {
-      return { statusCode: 405, body: "Method Not Allowed" };
+      return {statusCode: 405, body: "Method Not Allowed"};
     }
 
     const body = JSON.parse(event.body);
@@ -53,13 +53,13 @@ exports.handler = async (event, context) => {
         console.log('Email sent: ' + info.response);
         return {
           statusCode: 200,
-          body: JSON.stringify({ status: 'success' }),
+          body: JSON.stringify({status: 'success'}),
         };
       } catch (error) {
         console.error(error);
         return {
           statusCode: 500,
-          body: JSON.stringify({ status: 'error' }),
+          body: JSON.stringify({status: 'error'}),
         };
       }
     };

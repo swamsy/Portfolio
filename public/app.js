@@ -20,8 +20,8 @@ contactForm.addEventListener('submit', (e)=>{
     xhr.open('POST', '/.netlify/functions/contact');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.onload = function(){
-        console.log(xhr.responseText);
-        if(xhr.responseText == 'success'){
+        const response = JSON.parse(xhr.responseText);
+        if(response.status == 'success'){
             notification.classList.remove('hide');
             notification.style.backgroundColor = '#00C851';
             notificationMessage.innerHTML = 'Email sent!<i class="fa-solid fa-circle-check"></i>';

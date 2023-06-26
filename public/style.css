@@ -215,6 +215,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
+    max-width: 90%;
 }
 
 .projects-content-container .left-text ul li {
@@ -510,38 +511,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 400px) {
-    
-    /* HEADER */
-    .header-text h1 {
-        font-size: 1.5rem;
-    }
-
-    #huskies-logo {
-        margin-left: 0.6rem;
-        height: 2rem;
-    }
-
-    #download-cv {
-        font-size: 0.75rem;
-        margin-right: 0.35rem;
-        padding: 0.65rem 0.65rem;
-    }
-
-    .header-text .contact-icons a i {
-        font-size: 2.4rem;
-        margin-left: 0.8rem;
-    }   
-}
-
-@media screen and (max-width: 450px) {
-
-    #footer p {
-        font-size: 0.75rem;
-    }
-
-    #contact #contact-title {
-        margin-top: 0;
+@media screen and (max-width: 995px) {
+    #projects .description {
+        max-width: 100%;
     }
 }
 
@@ -560,7 +532,7 @@ body::-webkit-scrollbar-thumb {
     #download-cv {
         font-size: 1rem;
         margin-right: 0.5rem;
-        padding: 0.9rem 0.9rem;
+        padding: 0.85rem 1.1rem;
     }
 
     .header-text .contact-icons a i {
@@ -569,6 +541,10 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* NAV BAR */
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
     .hamburger {
         display: block;
     }
@@ -603,12 +579,29 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* PROJECTS */
+    #projects #projects-title {
+        font-size: 1.8rem;
+    }
+
     #projects .project-name {
         font-size: 2.5rem;
     }
 
     #projects .left-text .visit-site {
         margin-bottom: 1rem;
+    }
+
+    #projects .site-code {
+        margin-bottom: 1.2rem;
+    }
+
+    #projects .site-code .visit-site, #projects .site-code .see-code {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    #projects .site-code .visit-site {
+        margin-right: 1rem;
     }
 
     .iphone {
@@ -618,6 +611,18 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* CONTACT */
+    #contact #contact-title {
+        font-size: 1.8rem;
+    }
+
+    #contact #get-in-touch {
+        font-size: 2.5rem;
+    }
+
+    .left-contact .contact-icons a i{
+        font-size: 2.5rem;
+    }
+
     #contact .contact-content-container {
       flex-direction: column;
     }
@@ -636,8 +641,50 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media screen and (max-width: 995px) {
-    #projects .description {
-        max-width: 100%;
+@media screen and (max-width: 450px) {
+
+    /* CONTACT */
+    #contact #contact-title {
+        margin-top: 0;
+    }
+
+    /* FOOTER */
+    #footer h2 {
+        font-size: 1.2rem;
+    }
+
+    #footer p {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    /* HEADER */
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    #huskies-logo {
+        margin-left: 0.6rem;
+        height: 2rem;
+    }
+
+    #download-cv {
+        font-size: 0.75rem;
+        margin-right: 0.35rem;
+        padding: 0.65rem 0.9rem;
+    }
+
+    .header-text .contact-icons a i {
+        font-size: 2.2rem;
+        margin-left: 0.8rem;
+    }   
+
+    /* CONTACT */
+    #send-button {
+        font-size: 1rem;
+        padding: 0.8rem 0;
+        border-radius: 500px;
     }
 }
