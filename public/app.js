@@ -17,7 +17,7 @@ contactForm.addEventListener('submit', (e)=>{
     }
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/.netlify/functions/contact');
+    xhr.open('POST', 'https://mswan.dev/.netlify/functions/contact');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.onload = function(){
         const response = JSON.parse(xhr.responseText);
@@ -58,7 +58,7 @@ window.addEventListener('scroll', () => {
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-document.addEventListener("click", () => {
+hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
 })
