@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Swan | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/sal.js/dist/sal.css">
     <link rel="icon" type="image/png" href="/images/Interlocked-Chain.png" />
     <script src="https://kit.fontawesome.com/652dbeb7b5.js" crossorigin="anonymous"></script>
 </head>
@@ -13,7 +14,7 @@
 <!--Header-->
 <div id="header">
     <div class="container">
-        <nav class="navbar">
+        <nav class="navbar" data-sal="slide-down" data-sal-delay="1000" data-sal-easing="ease">
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#projects-title" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="#contact-title" class="nav-link">Contact</a></li>
@@ -26,16 +27,16 @@
         </nav>
         <div class="header-text">
             <div class="intro">
-                <h1>Hello, I'm Michael 👋</h1>
-                <hr>
+                <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">Hello, I'm Michael 👋</h1>
+                <hr data-sal="slide-up" data-sal-delay="500" data-sal-easing="ease">
             </div>
-            <h1>
+            <h1 data-sal="slide-up" data-sal-delay="500" data-sal-easing="ease">
                 Computer Science |<br>University of 
                 <span id="cs-student-ct">Connecticut
                     <img src="/images/Huskies-Logo.png" id="huskies-logo" alt="Uconn Huskies Logo">
                 </span>
             </h1>
-            <div class="actions">
+            <div class="actions" data-sal="slide-up" data-sal-delay="700" data-sal-easing="ease">
                 <a href="/images/Michael_Swan-Resume.pdf" target="_blank" id="download-cv"><i class="fa-solid fa-download"></i>Download CV</a>
                 <div class="contact-icons">
                     <a href="https://www.linkedin.com/in/m-swan" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -151,6 +152,7 @@
 <!--Scroll to top button-->
 <a href="#" class="stt"><i class="fa-solid fa-arrow-up"></i></a>
 
+<script src="https://unpkg.com/sal.js/dist/sal.js"></script>
 <script src="app.js"></script>
 
 </body>

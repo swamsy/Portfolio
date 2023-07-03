@@ -124,11 +124,21 @@ nav ul li a {
     color: #fffffe;
     font-size: 1.125rem;
     font-weight: bold;
-    transition: 0.3s;
+    position: relative;
 }
 
-nav ul li a:hover {
-    opacity: 75%;
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -8px;
+    left: 0;
+    background: #7f5af0;
+}
+
+nav ul li a:hover::before {
+    animation: shrink-grow 0.5s ease-in-out;
 }
 
 .hamburger {
@@ -162,16 +172,15 @@ nav ul li a:hover {
     content: "";
     position: absolute;
     width: 100%;
-    height:40%;
-    margin-left: 0.3rem;
+    height: 40%;
     bottom: -5%;
-    left: 0;
+    left: 0.3rem;
     background: #7f5af0;
     z-index: -1;
 }       
 
 .sub-title h1:hover::before {
-    animation: shrink-grow 0.4s ease-in-out;
+    animation: shrink-grow 0.5s ease-in-out;
 }
 
 @keyframes shrink-grow {

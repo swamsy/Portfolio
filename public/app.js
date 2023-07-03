@@ -1,3 +1,6 @@
+// Scroll Animation Library
+sal();
+
 // Contact form functionality
 const contactForm = document.querySelector('.contact-form');
 const notification = document.getElementById('notification');
@@ -34,7 +37,7 @@ contactForm.addEventListener('submit', (e)=>{
             notificationMessage.innerHTML = 'Something went wrong!<i class="fa-solid fa-circle-xmark"></i>';
         }
 
-        setTimeout(() => {notification.classList.add('hide');}, 4000);
+        setTimeout(() => {notification.classList.add('hide');}, 4500);
     }
 
     xhr.send(JSON.stringify(formData));
@@ -68,3 +71,4 @@ document.querySelectorAll(".nav-link").forEach(n => n.
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }))
+
