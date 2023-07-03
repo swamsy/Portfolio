@@ -12,6 +12,7 @@ const tokenGenerator = xoauth2.createXOAuth2Generator({
 
 tokenGenerator.on('token', token => {
     accessToken = token.accessToken;
+    transporter.set('auth.accessToken', accessToken);
 });
 
 tokenGenerator.getToken((err, token) => {
