@@ -20,7 +20,7 @@ tokenGenerator.getToken((err, token) => {
         console.log(err);
         return;
     }
-    accessToken = token;
+    accessToken = token.accessToken;
 });
 
 const transporter = nodemailer.createTransport({
