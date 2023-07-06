@@ -1,5 +1,7 @@
 // Scroll Animation Library
-sal();
+sal({
+    threshold: 0.2
+});
 
 // Contact form functionality
 const contactForm = document.querySelector('.contact-form');
