@@ -10,19 +10,6 @@ const tokenGenerator = xoauth2.createXOAuth2Generator({
     refreshToken: process.env.OAUTH_REFRESHTOKEN
 });
 
-tokenGenerator.on('token', token => {
-    accessToken = token.accessToken;
-    transporter.set('auth.accessToken', accessToken);
-});
-
-tokenGenerator.getToken((err, token) => {
-    if(err) {
-        console.log(err);
-        return;
-    }
-    accessToken = token.accessToken;
-});
-
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -36,31 +23,43 @@ const transporter = nodemailer.createTransport({
 });
 
 exports.handler = async (event, context) => {
-    if (event.httpMethod !== "POST") {
-      return {statusCode: 405, body: "Method Not Allowed"};
+  if (event.httpMethod !== "POST") {
+    return {statusCode: 405, body: "Method Not Allowed"};
+  }
+
+  const body = JSON.parse(event.body);
+
+  const mailOptions = {
+      from: body.email,
+      to: process.env.GMAIL_USERNAME,
+      subject: `New Message From ${body.formName}`,
+      text: `Name: ${body.formName}\nEmail: ${body.email}\nMessage: ${body.message}`,
+  }
+
+  try {
+      const token = await new Promise((resolve, reject) => {
+        tokenGenerator.getToken((err, token) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(token);
+            }
+        });
+      });
+
+      // Update transporter with new access token
+      transporter.set('options.auth.accessToken', token.accessToken);
+      let info = await transporter.sendMail(mailOptions);
+      console.log('Email sent: ' + info.response);
+      return {
+        statusCode: 200,
+        body: JSON.stringify({status: 'success'}),
+      };
+  } catch (error) {
+      console.error(error);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({status: 'error'}),
+      };
     }
-
-    const body = JSON.parse(event.body);
-
-    const mailOptions = {
-        from: body.email,
-        to: process.env.GMAIL_USERNAME,
-        subject: `New Message From ${body.formName}`,
-        text: `Name: ${body.formName}\nEmail: ${body.email}\nMessage: ${body.message}`,
-    }
-
-    try {
-        let info = await transporter.sendMail(mailOptions);
-        console.log('Email sent: ' + info.response);
-        return {
-          statusCode: 200,
-          body: JSON.stringify({status: 'success'}),
-        };
-      } catch (error) {
-        console.error(error);
-        return {
-          statusCode: 500,
-          body: JSON.stringify({status: 'error'}),
-        };
-      }
-    };
+};

@@ -22,7 +22,7 @@ contactForm.addEventListener('submit', (e)=>{
     }
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://mswan.dev/.netlify/functions/contact');
+    xhr.open('POST', 'http://localhost:8888/.netlify/functions/contact');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.onload = function(){
         const response = JSON.parse(xhr.responseText);
