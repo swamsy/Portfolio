@@ -21,7 +21,6 @@ The website is built using the following technologies:
 - HTML
 - CSS
 - JavaScript
-- Node.js
 - Netlify
 
 ## Contact
