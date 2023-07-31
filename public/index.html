@@ -122,15 +122,15 @@
                 </div>
                 <form name="contact" method="POST" class="contact-form" netlify>
                     <div class="group">
-                        <input type="text" id="name" required placeholder=" ">
+                        <input type="text" id="name" name="name" required placeholder=" ">
                         <label for="name">Name</label>
                     </div>
                     <div class="group">
-                        <input type="email" id="email" required placeholder=" ">
+                        <input type="email" id="email" name="email" required placeholder=" ">
                         <label for="email">Email</label>
                     </div>
                     <div class="group">
-                        <textarea id="message" rows="10" required placeholder=" "></textarea>
+                        <textarea id="message" name="message" rows="10" required placeholder=" "></textarea>
                         <label for="message">Message</label>
                     </div>
                     <button type="submit" id="send-button">Send<i class="fa-solid fa-paper-plane"></i></button>

@@ -8,10 +8,6 @@ const contactForm = document.querySelector('.contact-form');
 const notification = document.getElementById('notification');
 const notificationMessage = document.getElementById('notification-message');
 
-let formName = document.getElementById('name');
-let email = document.getElementById('email');
-let message = document.getElementById('message');
-
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
   
