@@ -236,10 +236,6 @@ nav ul li a:hover::before {
     background: #16161A;
 }
 
-.projects-content-container .left-text ul li.TBD-languages {
-    color:#16161A;
-}
-
 #projects .site-code {
     display: flex;
     flex-wrap: wrap;

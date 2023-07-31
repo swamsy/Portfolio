@@ -12,39 +12,31 @@ let formName = document.getElementById('name');
 let email = document.getElementById('email');
 let message = document.getElementById('message');
 
-contactForm.addEventListener('submit', (e)=>{
+contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    let formData = {
-        formName: formName.value,
-        email: email.value,
-        message: message.value
-    }
-
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://mswan.dev/.netlify/functions/contact');
-    xhr.setRequestHeader('content-type', 'application/json');
-    xhr.onload = function(){
-        const response = JSON.parse(xhr.responseText);
-        if(response.status == 'success'){
-            notification.classList.remove('hide');
-            notification.style.backgroundColor = '#00C851';
-            notificationMessage.innerHTML = 'Email sent!<i class="fa-solid fa-circle-check"></i>';
-            formName.value = '';
-            email.value = '';
-            message.value = '';
-        }else{
-            notification.classList.remove('hide');
-            notification.style.backgroundColor = '#ff4444';
-            notificationMessage.innerHTML = 'Something went wrong!<i class="fa-solid fa-circle-xmark"></i>';
-        }
-
-        setTimeout(() => {notification.classList.add('hide');}, 4500);
-    }
-
-    xhr.send(JSON.stringify(formData));
-
-});
+  
+    const formData = new FormData(contactForm);
+  
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        notification.classList.remove('hide');
+        notification.style.backgroundColor = '#00C851';
+        notificationMessage.innerHTML = 'Email sent!<i class="fa-solid fa-circle-check"></i>';
+        contactForm.reset();
+      })
+      .catch((error) => {
+        notification.classList.remove('hide');
+        notification.style.backgroundColor = '#ff4444';
+        notificationMessage.innerHTML = 'Something went wrong!<i class="fa-solid fa-circle-xmark"></i>';
+        console.error(error);
+      });
+  
+    setTimeout(() => { notification.classList.add('hide'); }, 4500);
+  });
 
 
 // Scroll to top button functionality
