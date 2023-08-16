@@ -198,6 +198,12 @@ nav ul li a:hover::before {
     justify-content: space-between;
 }
 
+#projects .left-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
 #projects h2 {
     font-size: 2rem;
     margin: 0;
@@ -224,7 +230,8 @@ nav ul li a:hover::before {
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    max-width: 90%;
+    margin-top: 0;
+    max-width: 80%;
 }
 
 .projects-content-container .left-text ul li {
@@ -277,8 +284,8 @@ nav ul li a:hover::before {
 
 #projects .right-image {
     position: relative;
-    width: 420px;
-    height: 350px; 
+    width: 440px;
+    height: 366px; 
     margin-top: 2.3rem;
     transition: all 0.3s ease; 
 }
@@ -517,8 +524,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 995px) {
-    #projects .description {
+@media screen and (max-width: 1024px) {
+    #projects .left-text {
+        flex-basis: 100%;
+    }
+
+    .projects-content-container .left-text ul {
         max-width: 100%;
     }
 }
