@@ -524,6 +524,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* MEDIA QUERIES */
+@media screen and (min-height: 2000px) {
+    #header {
+        height: 90vh;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     #projects .projects-content-container {
         margin-bottom: 0px;
