@@ -10,8 +10,8 @@ You can view the live website [here](http://mswan.dev).
 
 The portfolio is organized as follows:
 
-- **Introduction**: A brief introduction about myself, with links to download my resume and visit my socials.
-- **Projects**: A showcase of projects that I have worked on, accompanied by a brief description and the technologies used.
+- **Introduction**: A brief welcome to the site, with links to download my resume and visit my socials.
+- **Projects**: A showcase of projects that I have worked on, accompanied by a description and the technologies used.
 - **Contact**: A section with a contact form for anyone interested in getting in touch with me. Whether you have a question, a suggestion, or a potential opportunity, I'd love to hear from you!
 
 ## Tech Stack
@@ -25,4 +25,4 @@ The website is built using the following technologies:
 
 ## Contact
 
-Feel free to get in touch with me via the contact form on my portfolio, or through my GitHub profile.
+Feel free to get in touch with me via the contact form on my portfolio, through my GitHub profile, or by [email](mailto:amikeswan@gmail.com).
