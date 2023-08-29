@@ -25,4 +25,4 @@ The website is built using the following technologies:
 
 ## Contact
 
-Feel free to get in touch with me via the contact form on my portfolio, through my GitHub profile, or by [email](amikeswan@gmail.com).
+Feel free to get in touch with me via the contact form on my portfolio, through my GitHub profile, or by [email](mailto:amikeswan@gmail.com).
