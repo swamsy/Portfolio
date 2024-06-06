@@ -62,3 +62,6 @@ document.querySelectorAll(".nav-link").forEach(n => n.
         navMenu.classList.remove("active");
     }))
 
+// Set current year in footer
+const currentYear = new Date().getFullYear();
+document.getElementById('year').textContent = currentYear;
