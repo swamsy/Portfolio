@@ -98,8 +98,11 @@ a {
 .header-text .contact-icons a i {
     font-size: 3.125rem;
     color: #7f5af0;
-    margin-left: 1.25rem;
     transition: 0.3s;
+}
+
+.header-text .contact-icons .fa-github {
+    margin-left: 1.25rem;
 }
 
 .header-text .contact-icons a i:hover {
@@ -564,7 +567,10 @@ body::-webkit-scrollbar-thumb {
 
     .header-text .contact-icons a i {
         font-size: 2.7rem;
-        margin-left: 1rem;
+    }
+
+    .header-text .contact-icons .fa-github {
+      margin-left: 1rem;
     }
 
     /* NAV BAR */
@@ -705,8 +711,11 @@ body::-webkit-scrollbar-thumb {
 
     .header-text .contact-icons a i {
         font-size: 2.2rem;
-        margin-left: 0.8rem;
-    }   
+    }
+    
+    .header-text .contact-icons .fa-github {
+      margin-left: 0.8rem;
+    }
 
     /* CONTACT */
     #send-button {
